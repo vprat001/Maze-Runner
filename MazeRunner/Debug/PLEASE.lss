@@ -1,0 +1,1662 @@
+
+PLEASE.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         000000f0  00800100  00000a1a  00000aae  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000a1a  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000018  008001f0  008001f0  00000b9e  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000b9e  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000118  00000000  00000000  00000bce  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000b68  00000000  00000000  00000ce6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000002ac  00000000  00000000  0000184e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000bb3  00000000  00000000  00001afa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000248  00000000  00000000  000026b0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000003f4  00000000  00000000  000028f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    0000059f  00000000  00000000  00002cec  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000108  00000000  00000000  0000328b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	60 c0       	rjmp	.+192    	; 0xc6 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	5e c0       	rjmp	.+188    	; 0xc6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	5c c0       	rjmp	.+184    	; 0xc6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	5a c0       	rjmp	.+180    	; 0xc6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	58 c0       	rjmp	.+176    	; 0xc6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	56 c0       	rjmp	.+172    	; 0xc6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	54 c0       	rjmp	.+168    	; 0xc6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	52 c0       	rjmp	.+164    	; 0xc6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	50 c0       	rjmp	.+160    	; 0xc6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	4e c0       	rjmp	.+156    	; 0xc6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	4c c0       	rjmp	.+152    	; 0xc6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	4a c0       	rjmp	.+148    	; 0xc6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	6d c0       	rjmp	.+218    	; 0x110 <__vector_13>
+  36:	00 00       	nop
+  38:	46 c0       	rjmp	.+140    	; 0xc6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	44 c0       	rjmp	.+136    	; 0xc6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	42 c0       	rjmp	.+132    	; 0xc6 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	40 c0       	rjmp	.+128    	; 0xc6 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	3e c0       	rjmp	.+124    	; 0xc6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	3c c0       	rjmp	.+120    	; 0xc6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	3a c0       	rjmp	.+116    	; 0xc6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	38 c0       	rjmp	.+112    	; 0xc6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	36 c0       	rjmp	.+108    	; 0xc6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	34 c0       	rjmp	.+104    	; 0xc6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	32 c0       	rjmp	.+100    	; 0xc6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	30 c0       	rjmp	.+96     	; 0xc6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	2e c0       	rjmp	.+92     	; 0xc6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	2c c0       	rjmp	.+88     	; 0xc6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	2a c0       	rjmp	.+84     	; 0xc6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	28 c0       	rjmp	.+80     	; 0xc6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	26 c0       	rjmp	.+76     	; 0xc6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	24 c0       	rjmp	.+72     	; 0xc6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	22 c0       	rjmp	.+68     	; 0xc6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	20 c0       	rjmp	.+64     	; 0xc6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	1e c0       	rjmp	.+60     	; 0xc6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e4       	ldi	r29, 0x40	; 64
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	ea e1       	ldi	r30, 0x1A	; 26
+  a0:	fa e0       	ldi	r31, 0x0A	; 10
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a0 3f       	cpi	r26, 0xF0	; 240
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+  b2:	22 e0       	ldi	r18, 0x02	; 2
+  b4:	a0 ef       	ldi	r26, 0xF0	; 240
+  b6:	b1 e0       	ldi	r27, 0x01	; 1
+  b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+  ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+  bc:	a8 30       	cpi	r26, 0x08	; 8
+  be:	b2 07       	cpc	r27, r18
+  c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+  c2:	4d d4       	rcall	.+2202   	; 0x95e <main>
+  c4:	a8 c4       	rjmp	.+2384   	; 0xa16 <_exit>
+
+000000c6 <__bad_interrupt>:
+  c6:	9c cf       	rjmp	.-200    	; 0x0 <__vectors>
+
+000000c8 <TimerOn>:
+	}
+	else {
+		while ( !(UCSR1A & (1 << RXC1)) );
+		return UDR1;
+	}
+}
+  c8:	8b e0       	ldi	r24, 0x0B	; 11
+  ca:	80 93 81 00 	sts	0x0081, r24
+  ce:	8d e7       	ldi	r24, 0x7D	; 125
+  d0:	90 e0       	ldi	r25, 0x00	; 0
+  d2:	90 93 89 00 	sts	0x0089, r25
+  d6:	80 93 88 00 	sts	0x0088, r24
+  da:	82 e0       	ldi	r24, 0x02	; 2
+  dc:	80 93 6f 00 	sts	0x006F, r24
+  e0:	10 92 85 00 	sts	0x0085, r1
+  e4:	10 92 84 00 	sts	0x0084, r1
+  e8:	80 91 6e 01 	lds	r24, 0x016E
+  ec:	90 91 6f 01 	lds	r25, 0x016F
+  f0:	a0 91 70 01 	lds	r26, 0x0170
+  f4:	b0 91 71 01 	lds	r27, 0x0171
+  f8:	80 93 f6 01 	sts	0x01F6, r24
+  fc:	90 93 f7 01 	sts	0x01F7, r25
+ 100:	a0 93 f8 01 	sts	0x01F8, r26
+ 104:	b0 93 f9 01 	sts	0x01F9, r27
+ 108:	8f b7       	in	r24, 0x3f	; 63
+ 10a:	80 68       	ori	r24, 0x80	; 128
+ 10c:	8f bf       	out	0x3f, r24	; 63
+ 10e:	08 95       	ret
+
+00000110 <__vector_13>:
+ 110:	1f 92       	push	r1
+ 112:	0f 92       	push	r0
+ 114:	0f b6       	in	r0, 0x3f	; 63
+ 116:	0f 92       	push	r0
+ 118:	11 24       	eor	r1, r1
+ 11a:	8f 93       	push	r24
+ 11c:	9f 93       	push	r25
+ 11e:	af 93       	push	r26
+ 120:	bf 93       	push	r27
+ 122:	80 91 f6 01 	lds	r24, 0x01F6
+ 126:	90 91 f7 01 	lds	r25, 0x01F7
+ 12a:	a0 91 f8 01 	lds	r26, 0x01F8
+ 12e:	b0 91 f9 01 	lds	r27, 0x01F9
+ 132:	01 97       	sbiw	r24, 0x01	; 1
+ 134:	a1 09       	sbc	r26, r1
+ 136:	b1 09       	sbc	r27, r1
+ 138:	80 93 f6 01 	sts	0x01F6, r24
+ 13c:	90 93 f7 01 	sts	0x01F7, r25
+ 140:	a0 93 f8 01 	sts	0x01F8, r26
+ 144:	b0 93 f9 01 	sts	0x01F9, r27
+ 148:	89 2b       	or	r24, r25
+ 14a:	8a 2b       	or	r24, r26
+ 14c:	8b 2b       	or	r24, r27
+ 14e:	99 f4       	brne	.+38     	; 0x176 <__vector_13+0x66>
+ 150:	81 e0       	ldi	r24, 0x01	; 1
+ 152:	80 93 fa 01 	sts	0x01FA, r24
+ 156:	80 91 6e 01 	lds	r24, 0x016E
+ 15a:	90 91 6f 01 	lds	r25, 0x016F
+ 15e:	a0 91 70 01 	lds	r26, 0x0170
+ 162:	b0 91 71 01 	lds	r27, 0x0171
+ 166:	80 93 f6 01 	sts	0x01F6, r24
+ 16a:	90 93 f7 01 	sts	0x01F7, r25
+ 16e:	a0 93 f8 01 	sts	0x01F8, r26
+ 172:	b0 93 f9 01 	sts	0x01F9, r27
+ 176:	bf 91       	pop	r27
+ 178:	af 91       	pop	r26
+ 17a:	9f 91       	pop	r25
+ 17c:	8f 91       	pop	r24
+ 17e:	0f 90       	pop	r0
+ 180:	0f be       	out	0x3f, r0	; 63
+ 182:	0f 90       	pop	r0
+ 184:	1f 90       	pop	r1
+ 186:	18 95       	reti
+
+00000188 <GetKeypadKey>:
+ 188:	8f ee       	ldi	r24, 0xEF	; 239
+ 18a:	88 b9       	out	0x08, r24	; 8
+ 18c:	00 00       	nop
+ 18e:	30 9b       	sbis	0x06, 0	; 6
+ 190:	29 c0       	rjmp	.+82     	; 0x1e4 <GetKeypadKey+0x5c>
+ 192:	31 9b       	sbis	0x06, 1	; 6
+ 194:	29 c0       	rjmp	.+82     	; 0x1e8 <GetKeypadKey+0x60>
+ 196:	32 9b       	sbis	0x06, 2	; 6
+ 198:	29 c0       	rjmp	.+82     	; 0x1ec <GetKeypadKey+0x64>
+ 19a:	33 9b       	sbis	0x06, 3	; 6
+ 19c:	29 c0       	rjmp	.+82     	; 0x1f0 <GetKeypadKey+0x68>
+ 19e:	8f ed       	ldi	r24, 0xDF	; 223
+ 1a0:	88 b9       	out	0x08, r24	; 8
+ 1a2:	00 00       	nop
+ 1a4:	30 9b       	sbis	0x06, 0	; 6
+ 1a6:	26 c0       	rjmp	.+76     	; 0x1f4 <GetKeypadKey+0x6c>
+ 1a8:	31 9b       	sbis	0x06, 1	; 6
+ 1aa:	26 c0       	rjmp	.+76     	; 0x1f8 <GetKeypadKey+0x70>
+ 1ac:	32 9b       	sbis	0x06, 2	; 6
+ 1ae:	26 c0       	rjmp	.+76     	; 0x1fc <GetKeypadKey+0x74>
+ 1b0:	33 9b       	sbis	0x06, 3	; 6
+ 1b2:	26 c0       	rjmp	.+76     	; 0x200 <GetKeypadKey+0x78>
+ 1b4:	8f eb       	ldi	r24, 0xBF	; 191
+ 1b6:	88 b9       	out	0x08, r24	; 8
+ 1b8:	00 00       	nop
+ 1ba:	30 9b       	sbis	0x06, 0	; 6
+ 1bc:	23 c0       	rjmp	.+70     	; 0x204 <GetKeypadKey+0x7c>
+ 1be:	31 9b       	sbis	0x06, 1	; 6
+ 1c0:	23 c0       	rjmp	.+70     	; 0x208 <GetKeypadKey+0x80>
+ 1c2:	32 9b       	sbis	0x06, 2	; 6
+ 1c4:	23 c0       	rjmp	.+70     	; 0x20c <GetKeypadKey+0x84>
+ 1c6:	33 9b       	sbis	0x06, 3	; 6
+ 1c8:	23 c0       	rjmp	.+70     	; 0x210 <GetKeypadKey+0x88>
+ 1ca:	8f e7       	ldi	r24, 0x7F	; 127
+ 1cc:	88 b9       	out	0x08, r24	; 8
+ 1ce:	00 00       	nop
+ 1d0:	30 9b       	sbis	0x06, 0	; 6
+ 1d2:	20 c0       	rjmp	.+64     	; 0x214 <GetKeypadKey+0x8c>
+ 1d4:	31 9b       	sbis	0x06, 1	; 6
+ 1d6:	20 c0       	rjmp	.+64     	; 0x218 <GetKeypadKey+0x90>
+ 1d8:	32 9b       	sbis	0x06, 2	; 6
+ 1da:	20 c0       	rjmp	.+64     	; 0x21c <GetKeypadKey+0x94>
+ 1dc:	33 99       	sbic	0x06, 3	; 6
+ 1de:	20 c0       	rjmp	.+64     	; 0x220 <GetKeypadKey+0x98>
+ 1e0:	84 e4       	ldi	r24, 0x44	; 68
+ 1e2:	08 95       	ret
+ 1e4:	81 e3       	ldi	r24, 0x31	; 49
+ 1e6:	08 95       	ret
+ 1e8:	84 e3       	ldi	r24, 0x34	; 52
+ 1ea:	08 95       	ret
+ 1ec:	87 e3       	ldi	r24, 0x37	; 55
+ 1ee:	08 95       	ret
+ 1f0:	8a e2       	ldi	r24, 0x2A	; 42
+ 1f2:	08 95       	ret
+ 1f4:	82 e3       	ldi	r24, 0x32	; 50
+ 1f6:	08 95       	ret
+ 1f8:	85 e3       	ldi	r24, 0x35	; 53
+ 1fa:	08 95       	ret
+ 1fc:	88 e3       	ldi	r24, 0x38	; 56
+ 1fe:	08 95       	ret
+ 200:	80 e3       	ldi	r24, 0x30	; 48
+ 202:	08 95       	ret
+ 204:	83 e3       	ldi	r24, 0x33	; 51
+ 206:	08 95       	ret
+ 208:	86 e3       	ldi	r24, 0x36	; 54
+ 20a:	08 95       	ret
+ 20c:	89 e3       	ldi	r24, 0x39	; 57
+ 20e:	08 95       	ret
+ 210:	83 e2       	ldi	r24, 0x23	; 35
+ 212:	08 95       	ret
+ 214:	81 e4       	ldi	r24, 0x41	; 65
+ 216:	08 95       	ret
+ 218:	82 e4       	ldi	r24, 0x42	; 66
+ 21a:	08 95       	ret
+ 21c:	83 e4       	ldi	r24, 0x43	; 67
+ 21e:	08 95       	ret
+ 220:	80 e0       	ldi	r24, 0x00	; 0
+ 222:	08 95       	ret
+
+00000224 <initUSART>:
+ 224:	81 30       	cpi	r24, 0x01	; 1
+ 226:	81 f0       	breq	.+32     	; 0x248 <initUSART+0x24>
+ 228:	e1 ec       	ldi	r30, 0xC1	; 193
+ 22a:	f0 e0       	ldi	r31, 0x00	; 0
+ 22c:	80 81       	ld	r24, Z
+ 22e:	88 61       	ori	r24, 0x18	; 24
+ 230:	80 83       	st	Z, r24
+ 232:	e2 ec       	ldi	r30, 0xC2	; 194
+ 234:	f0 e0       	ldi	r31, 0x00	; 0
+ 236:	80 81       	ld	r24, Z
+ 238:	86 60       	ori	r24, 0x06	; 6
+ 23a:	80 83       	st	Z, r24
+ 23c:	83 e3       	ldi	r24, 0x33	; 51
+ 23e:	80 93 c4 00 	sts	0x00C4, r24
+ 242:	10 92 c5 00 	sts	0x00C5, r1
+ 246:	08 95       	ret
+ 248:	e9 ec       	ldi	r30, 0xC9	; 201
+ 24a:	f0 e0       	ldi	r31, 0x00	; 0
+ 24c:	80 81       	ld	r24, Z
+ 24e:	88 61       	ori	r24, 0x18	; 24
+ 250:	80 83       	st	Z, r24
+ 252:	ea ec       	ldi	r30, 0xCA	; 202
+ 254:	f0 e0       	ldi	r31, 0x00	; 0
+ 256:	80 81       	ld	r24, Z
+ 258:	86 60       	ori	r24, 0x06	; 6
+ 25a:	80 83       	st	Z, r24
+ 25c:	83 e3       	ldi	r24, 0x33	; 51
+ 25e:	80 93 cc 00 	sts	0x00CC, r24
+ 262:	10 92 cd 00 	sts	0x00CD, r1
+ 266:	08 95       	ret
+
+00000268 <USART_Send>:
+ 268:	61 30       	cpi	r22, 0x01	; 1
+ 26a:	41 f0       	breq	.+16     	; 0x27c <USART_Send+0x14>
+ 26c:	e0 ec       	ldi	r30, 0xC0	; 192
+ 26e:	f0 e0       	ldi	r31, 0x00	; 0
+ 270:	90 81       	ld	r25, Z
+ 272:	95 ff       	sbrs	r25, 5
+ 274:	fd cf       	rjmp	.-6      	; 0x270 <USART_Send+0x8>
+ 276:	80 93 c6 00 	sts	0x00C6, r24
+ 27a:	08 95       	ret
+ 27c:	e8 ec       	ldi	r30, 0xC8	; 200
+ 27e:	f0 e0       	ldi	r31, 0x00	; 0
+ 280:	90 81       	ld	r25, Z
+ 282:	95 ff       	sbrs	r25, 5
+ 284:	fd cf       	rjmp	.-6      	; 0x280 <USART_Send+0x18>
+ 286:	80 93 ce 00 	sts	0x00CE, r24
+ 28a:	08 95       	ret
+
+0000028c <transmit_data_IN>:
+void transmit_data_IN(unsigned char data) { int i;
+	for (i = 0; i < 8 ; ++i) {
+ 28c:	20 e0       	ldi	r18, 0x00	; 0
+ 28e:	30 e0       	ldi	r19, 0x00	; 0
+		// Sets SRCLR to 1 allowing data to be set
+		// Also clears SRCLK in preparation of sending data
+		PORTB = 0x00;
+		// set SER = next bit of data to be sent.
+		PORTB |= ((data >> i) & 0x01);
+ 290:	90 e0       	ldi	r25, 0x00	; 0
+void transmit_data_IN(unsigned char data) { int i;
+	for (i = 0; i < 8 ; ++i) {
+		// Sets SRCLR to 1 allowing data to be set
+		// Also clears SRCLK in preparation of sending data
+		PORTB = 0x00;
+ 292:	15 b8       	out	0x05, r1	; 5
+		// set SER = next bit of data to be sent.
+		PORTB |= ((data >> i) & 0x01);
+ 294:	65 b1       	in	r22, 0x05	; 5
+ 296:	ac 01       	movw	r20, r24
+ 298:	02 2e       	mov	r0, r18
+ 29a:	02 c0       	rjmp	.+4      	; 0x2a0 <transmit_data_IN+0x14>
+ 29c:	55 95       	asr	r21
+ 29e:	47 95       	ror	r20
+ 2a0:	0a 94       	dec	r0
+ 2a2:	e2 f7       	brpl	.-8      	; 0x29c <transmit_data_IN+0x10>
+ 2a4:	41 70       	andi	r20, 0x01	; 1
+ 2a6:	46 2b       	or	r20, r22
+ 2a8:	45 b9       	out	0x05, r20	; 5
+		// set SRCLK = 1. Rising edge shifts next bit of data into the shift register
+		PORTB |= 0x02;
+ 2aa:	29 9a       	sbi	0x05, 1	; 5
+void transmit_data_IN(unsigned char data) { int i;
+	for (i = 0; i < 8 ; ++i) {
+ 2ac:	2f 5f       	subi	r18, 0xFF	; 255
+ 2ae:	3f 4f       	sbci	r19, 0xFF	; 255
+ 2b0:	28 30       	cpi	r18, 0x08	; 8
+ 2b2:	31 05       	cpc	r19, r1
+ 2b4:	71 f7       	brne	.-36     	; 0x292 <transmit_data_IN+0x6>
+		PORTB |= ((data >> i) & 0x01);
+		// set SRCLK = 1. Rising edge shifts next bit of data into the shift register
+		PORTB |= 0x02;
+	}
+	// set RCLK = 1. Rising edge copies data from “Shift” register to “Storage” register
+	PORTB |= 0x04;
+ 2b6:	2a 9a       	sbi	0x05, 2	; 5
+ 2b8:	08 95       	ret
+
+000002ba <transmit_data_Red>:
+	// clears all lines in preparation of a new transmission PORTB = 0x00;
+}
+
+void transmit_data_Red(unsigned char data) { int k;
+	for (k = 0; k < 8 ; ++k) {
+ 2ba:	20 e0       	ldi	r18, 0x00	; 0
+ 2bc:	30 e0       	ldi	r19, 0x00	; 0
+		// Sets SRCLR to 1 allowing data to be set
+		// Also clears SRCLK in preparation of sending data
+		PORTA = 0x00;
+		// set SER = next bit of data to be sent.
+		PORTA |= (((data >> k) & 0x01) << 4);
+ 2be:	90 e0       	ldi	r25, 0x00	; 0
+
+void transmit_data_Red(unsigned char data) { int k;
+	for (k = 0; k < 8 ; ++k) {
+		// Sets SRCLR to 1 allowing data to be set
+		// Also clears SRCLK in preparation of sending data
+		PORTA = 0x00;
+ 2c0:	12 b8       	out	0x02, r1	; 2
+		// set SER = next bit of data to be sent.
+		PORTA |= (((data >> k) & 0x01) << 4);
+ 2c2:	e2 b1       	in	r30, 0x02	; 2
+ 2c4:	bc 01       	movw	r22, r24
+ 2c6:	02 2e       	mov	r0, r18
+ 2c8:	02 c0       	rjmp	.+4      	; 0x2ce <transmit_data_Red+0x14>
+ 2ca:	75 95       	asr	r23
+ 2cc:	67 95       	ror	r22
+ 2ce:	0a 94       	dec	r0
+ 2d0:	e2 f7       	brpl	.-8      	; 0x2ca <transmit_data_Red+0x10>
+ 2d2:	61 70       	andi	r22, 0x01	; 1
+ 2d4:	77 27       	eor	r23, r23
+ 2d6:	ab 01       	movw	r20, r22
+ 2d8:	42 95       	swap	r20
+ 2da:	52 95       	swap	r21
+ 2dc:	50 7f       	andi	r21, 0xF0	; 240
+ 2de:	54 27       	eor	r21, r20
+ 2e0:	40 7f       	andi	r20, 0xF0	; 240
+ 2e2:	54 27       	eor	r21, r20
+ 2e4:	4e 2b       	or	r20, r30
+ 2e6:	42 b9       	out	0x02, r20	; 2
+		// set SRCLK = 1. Rising edge shifts next bit of data into the shift register
+		PORTA |= 0x20;
+ 2e8:	15 9a       	sbi	0x02, 5	; 2
+	PORTB |= 0x04;
+	// clears all lines in preparation of a new transmission PORTB = 0x00;
+}
+
+void transmit_data_Red(unsigned char data) { int k;
+	for (k = 0; k < 8 ; ++k) {
+ 2ea:	2f 5f       	subi	r18, 0xFF	; 255
+ 2ec:	3f 4f       	sbci	r19, 0xFF	; 255
+ 2ee:	28 30       	cpi	r18, 0x08	; 8
+ 2f0:	31 05       	cpc	r19, r1
+ 2f2:	31 f7       	brne	.-52     	; 0x2c0 <transmit_data_Red+0x6>
+		PORTA |= (((data >> k) & 0x01) << 4);
+		// set SRCLK = 1. Rising edge shifts next bit of data into the shift register
+		PORTA |= 0x20;
+	}
+	// set RCLK = 1. Rising edge copies data from “Shift” register to “Storage” register
+	PORTA |= 0x40;
+ 2f4:	16 9a       	sbi	0x02, 6	; 2
+ 2f6:	08 95       	ret
+
+000002f8 <transmit_data_Green>:
+}
+
+
+
+void transmit_data_Green(unsigned char data) { int j;
+	for (j = 0; j < 8 ; ++j) {
+ 2f8:	20 e0       	ldi	r18, 0x00	; 0
+ 2fa:	30 e0       	ldi	r19, 0x00	; 0
+		// Sets SRCLR to 1 allowing data to be set
+		// Also clears SRCLK in preparation of sending data
+		PORTB = 0x00;
+		// set SER = next bit of data to be sent.
+		PORTB |= (((data >> j) & 0x01) << 4);
+ 2fc:	90 e0       	ldi	r25, 0x00	; 0
+
+void transmit_data_Green(unsigned char data) { int j;
+	for (j = 0; j < 8 ; ++j) {
+		// Sets SRCLR to 1 allowing data to be set
+		// Also clears SRCLK in preparation of sending data
+		PORTB = 0x00;
+ 2fe:	15 b8       	out	0x05, r1	; 5
+		// set SER = next bit of data to be sent.
+		PORTB |= (((data >> j) & 0x01) << 4);
+ 300:	e5 b1       	in	r30, 0x05	; 5
+ 302:	bc 01       	movw	r22, r24
+ 304:	02 2e       	mov	r0, r18
+ 306:	02 c0       	rjmp	.+4      	; 0x30c <transmit_data_Green+0x14>
+ 308:	75 95       	asr	r23
+ 30a:	67 95       	ror	r22
+ 30c:	0a 94       	dec	r0
+ 30e:	e2 f7       	brpl	.-8      	; 0x308 <transmit_data_Green+0x10>
+ 310:	61 70       	andi	r22, 0x01	; 1
+ 312:	77 27       	eor	r23, r23
+ 314:	ab 01       	movw	r20, r22
+ 316:	42 95       	swap	r20
+ 318:	52 95       	swap	r21
+ 31a:	50 7f       	andi	r21, 0xF0	; 240
+ 31c:	54 27       	eor	r21, r20
+ 31e:	40 7f       	andi	r20, 0xF0	; 240
+ 320:	54 27       	eor	r21, r20
+ 322:	4e 2b       	or	r20, r30
+ 324:	45 b9       	out	0x05, r20	; 5
+		// set SRCLK = 1. Rising edge shifts next bit of data into the shift register
+		PORTB |= 0x20;
+ 326:	2d 9a       	sbi	0x05, 5	; 5
+}
+
+
+
+void transmit_data_Green(unsigned char data) { int j;
+	for (j = 0; j < 8 ; ++j) {
+ 328:	2f 5f       	subi	r18, 0xFF	; 255
+ 32a:	3f 4f       	sbci	r19, 0xFF	; 255
+ 32c:	28 30       	cpi	r18, 0x08	; 8
+ 32e:	31 05       	cpc	r19, r1
+ 330:	31 f7       	brne	.-52     	; 0x2fe <transmit_data_Green+0x6>
+		PORTB |= (((data >> j) & 0x01) << 4);
+		// set SRCLK = 1. Rising edge shifts next bit of data into the shift register
+		PORTB |= 0x20;
+	}
+	// set RCLK = 1. Rising edge copies data from “Shift” register to “Storage” register
+	PORTB |= 0x40;
+ 332:	2e 9a       	sbi	0x05, 6	; 5
+ 334:	08 95       	ret
+
+00000336 <ADC_init>:
+void ADC_init()
+{
+	ADMUX = (1<<REFS0);
+ 336:	80 e4       	ldi	r24, 0x40	; 64
+ 338:	80 93 7c 00 	sts	0x007C, r24
+	ADCSRA = (1 << ADEN) | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);
+ 33c:	87 e8       	ldi	r24, 0x87	; 135
+ 33e:	80 93 7a 00 	sts	0x007A, r24
+ 342:	08 95       	ret
+
+00000344 <ReadADC>:
+//Read from the ADC channel ch
+uint16_t ReadADC(uint8_t ch)
+{
+	//Select ADC Channel
+	ch &= 0x07;
+	ADMUX = (ADMUX & 0xF8) | ch;
+ 344:	ec e7       	ldi	r30, 0x7C	; 124
+ 346:	f0 e0       	ldi	r31, 0x00	; 0
+ 348:	90 81       	ld	r25, Z
+
+//Read from the ADC channel ch
+uint16_t ReadADC(uint8_t ch)
+{
+	//Select ADC Channel
+	ch &= 0x07;
+ 34a:	87 70       	andi	r24, 0x07	; 7
+	ADMUX = (ADMUX & 0xF8) | ch;
+ 34c:	98 7f       	andi	r25, 0xF8	; 248
+ 34e:	98 2b       	or	r25, r24
+ 350:	90 83       	st	Z, r25
+
+	//Start Single conversion
+	ADCSRA |= (1 << ADSC);
+ 352:	ea e7       	ldi	r30, 0x7A	; 122
+ 354:	f0 e0       	ldi	r31, 0x00	; 0
+ 356:	80 81       	ld	r24, Z
+ 358:	80 64       	ori	r24, 0x40	; 64
+ 35a:	80 83       	st	Z, r24
+
+	//Wait for conversion to complete
+	while(ADCSRA & (1 << ADSC));
+ 35c:	80 81       	ld	r24, Z
+ 35e:	86 fd       	sbrc	r24, 6
+ 360:	fd cf       	rjmp	.-6      	; 0x35c <ReadADC+0x18>
+
+	//Clear ADIF
+	ADCSRA |= (1<<ADIF);
+ 362:	ea e7       	ldi	r30, 0x7A	; 122
+ 364:	f0 e0       	ldi	r31, 0x00	; 0
+ 366:	80 81       	ld	r24, Z
+ 368:	80 61       	ori	r24, 0x10	; 16
+ 36a:	80 83       	st	Z, r24
+	return (ADC);
+ 36c:	80 91 78 00 	lds	r24, 0x0078
+ 370:	90 91 79 00 	lds	r25, 0x0079
+}
+ 374:	08 95       	ret
+
+00000376 <adcSM>:
+volatile unsigned short jpress = 0;
+int16_t A0;
+int16_t A1;
+void adcSM()
+{
+	A0 = ReadADC(0);
+ 376:	80 e0       	ldi	r24, 0x00	; 0
+ 378:	e5 df       	rcall	.-54     	; 0x344 <ReadADC>
+ 37a:	90 93 fe 01 	sts	0x01FE, r25
+ 37e:	80 93 fd 01 	sts	0x01FD, r24
+	A1 = ReadADC(1);
+ 382:	81 e0       	ldi	r24, 0x01	; 1
+ 384:	df df       	rcall	.-66     	; 0x344 <ReadADC>
+ 386:	90 93 07 02 	sts	0x0207, r25
+ 38a:	80 93 06 02 	sts	0x0206, r24
+	
+	if(A0 > 600)
+ 38e:	20 91 fd 01 	lds	r18, 0x01FD
+ 392:	30 91 fe 01 	lds	r19, 0x01FE
+ 396:	29 35       	cpi	r18, 0x59	; 89
+ 398:	42 e0       	ldi	r20, 0x02	; 2
+ 39a:	34 07       	cpc	r19, r20
+ 39c:	3c f0       	brlt	.+14     	; 0x3ac <adcSM+0x36>
+	{
+		jpress = 0x01;
+ 39e:	81 e0       	ldi	r24, 0x01	; 1
+ 3a0:	90 e0       	ldi	r25, 0x00	; 0
+ 3a2:	90 93 f5 01 	sts	0x01F5, r25
+ 3a6:	80 93 f4 01 	sts	0x01F4, r24
+ 3aa:	08 95       	ret
+	}
+	else if (A0 < 500)
+ 3ac:	24 3f       	cpi	r18, 0xF4	; 244
+ 3ae:	31 40       	sbci	r19, 0x01	; 1
+ 3b0:	3c f4       	brge	.+14     	; 0x3c0 <adcSM+0x4a>
+	{
+		jpress = 0x02;
+ 3b2:	82 e0       	ldi	r24, 0x02	; 2
+ 3b4:	90 e0       	ldi	r25, 0x00	; 0
+ 3b6:	90 93 f5 01 	sts	0x01F5, r25
+ 3ba:	80 93 f4 01 	sts	0x01F4, r24
+ 3be:	08 95       	ret
+	}
+	else if (A1 > 600)
+ 3c0:	89 35       	cpi	r24, 0x59	; 89
+ 3c2:	22 e0       	ldi	r18, 0x02	; 2
+ 3c4:	92 07       	cpc	r25, r18
+ 3c6:	3c f0       	brlt	.+14     	; 0x3d6 <adcSM+0x60>
+	{
+		jpress = 0x04;
+ 3c8:	84 e0       	ldi	r24, 0x04	; 4
+ 3ca:	90 e0       	ldi	r25, 0x00	; 0
+ 3cc:	90 93 f5 01 	sts	0x01F5, r25
+ 3d0:	80 93 f4 01 	sts	0x01F4, r24
+ 3d4:	08 95       	ret
+	}
+	else if (A1 < 500)
+ 3d6:	84 3f       	cpi	r24, 0xF4	; 244
+ 3d8:	91 40       	sbci	r25, 0x01	; 1
+ 3da:	3c f4       	brge	.+14     	; 0x3ea <adcSM+0x74>
+	{
+		jpress = 0x08;
+ 3dc:	88 e0       	ldi	r24, 0x08	; 8
+ 3de:	90 e0       	ldi	r25, 0x00	; 0
+ 3e0:	90 93 f5 01 	sts	0x01F5, r25
+ 3e4:	80 93 f4 01 	sts	0x01F4, r24
+ 3e8:	08 95       	ret
+	}
+	else
+	{
+		jpress = 0x00;
+ 3ea:	10 92 f5 01 	sts	0x01F5, r1
+ 3ee:	10 92 f4 01 	sts	0x01F4, r1
+ 3f2:	08 95       	ret
+
+000003f4 <displaySM>:
+unsigned char * finish = "Good job! You finished playing this map, choose another map to keep playing.";
+unsigned char k;
+enum display_SM {init, display, incr} display_state;
+void displaySM(){
+	
+	switch(display_state){
+ 3f4:	80 91 03 02 	lds	r24, 0x0203
+ 3f8:	81 30       	cpi	r24, 0x01	; 1
+ 3fa:	41 f0       	breq	.+16     	; 0x40c <displaySM+0x18>
+ 3fc:	18 f0       	brcs	.+6      	; 0x404 <displaySM+0x10>
+ 3fe:	82 30       	cpi	r24, 0x02	; 2
+ 400:	a1 f1       	breq	.+104    	; 0x46a <displaySM+0x76>
+ 402:	3e c0       	rjmp	.+124    	; 0x480 <displaySM+0x8c>
+		case init:
+		display_state = display;
+ 404:	81 e0       	ldi	r24, 0x01	; 1
+ 406:	80 93 03 02 	sts	0x0203, r24
+		break;
+ 40a:	44 c0       	rjmp	.+136    	; 0x494 <displaySM+0xa0>
+		case display:
+		if (GetKeypadKey() == '1'){
+ 40c:	bd de       	rcall	.-646    	; 0x188 <GetKeypadKey>
+ 40e:	81 33       	cpi	r24, 0x31	; 49
+ 410:	29 f4       	brne	.+10     	; 0x41c <displaySM+0x28>
+			
+			score = 0;
+ 412:	10 92 01 02 	sts	0x0201, r1
+			j = 0;
+ 416:	10 92 fc 01 	sts	0x01FC, r1
+ 41a:	23 c0       	rjmp	.+70     	; 0x462 <displaySM+0x6e>
+		}
+		else if (GetKeypadKey() == '2'){
+ 41c:	b5 de       	rcall	.-662    	; 0x188 <GetKeypadKey>
+ 41e:	82 33       	cpi	r24, 0x32	; 50
+ 420:	31 f4       	brne	.+12     	; 0x42e <displaySM+0x3a>
+			
+			score = 0;
+ 422:	10 92 01 02 	sts	0x0201, r1
+			j = 1;
+ 426:	81 e0       	ldi	r24, 0x01	; 1
+ 428:	80 93 fc 01 	sts	0x01FC, r24
+ 42c:	1a c0       	rjmp	.+52     	; 0x462 <displaySM+0x6e>
+		}
+		else if (GetKeypadKey() == '3'){
+ 42e:	ac de       	rcall	.-680    	; 0x188 <GetKeypadKey>
+ 430:	83 33       	cpi	r24, 0x33	; 51
+ 432:	31 f4       	brne	.+12     	; 0x440 <displaySM+0x4c>
+			
+			score = 0;
+ 434:	10 92 01 02 	sts	0x0201, r1
+			j = 2;
+ 438:	82 e0       	ldi	r24, 0x02	; 2
+ 43a:	80 93 fc 01 	sts	0x01FC, r24
+ 43e:	11 c0       	rjmp	.+34     	; 0x462 <displaySM+0x6e>
+		}
+		else if (GetKeypadKey() == '4'){
+ 440:	a3 de       	rcall	.-698    	; 0x188 <GetKeypadKey>
+ 442:	84 33       	cpi	r24, 0x34	; 52
+ 444:	31 f4       	brne	.+12     	; 0x452 <displaySM+0x5e>
+			
+			score = 0;
+ 446:	10 92 01 02 	sts	0x0201, r1
+			j = 3;
+ 44a:	83 e0       	ldi	r24, 0x03	; 3
+ 44c:	80 93 fc 01 	sts	0x01FC, r24
+ 450:	08 c0       	rjmp	.+16     	; 0x462 <displaySM+0x6e>
+		}
+		else if (GetKeypadKey() == '5'){
+ 452:	9a de       	rcall	.-716    	; 0x188 <GetKeypadKey>
+ 454:	85 33       	cpi	r24, 0x35	; 53
+ 456:	29 f4       	brne	.+10     	; 0x462 <displaySM+0x6e>
+			
+			score = 0;
+ 458:	10 92 01 02 	sts	0x0201, r1
+			j = 4;
+ 45c:	84 e0       	ldi	r24, 0x04	; 4
+ 45e:	80 93 fc 01 	sts	0x01FC, r24
+		}
+		
+		display_state = incr;
+ 462:	82 e0       	ldi	r24, 0x02	; 2
+ 464:	80 93 03 02 	sts	0x0203, r24
+ 468:	c1 c0       	rjmp	.+386    	; 0x5ec <displaySM+0x1f8>
+		break;
+		case incr:
+		if(i >= 8){
+ 46a:	80 91 02 02 	lds	r24, 0x0202
+ 46e:	88 30       	cpi	r24, 0x08	; 8
+ 470:	18 f0       	brcs	.+6      	; 0x478 <displaySM+0x84>
+			display_state = init;
+ 472:	10 92 03 02 	sts	0x0203, r1
+ 476:	0b c0       	rjmp	.+22     	; 0x48e <displaySM+0x9a>
+		}
+		else{
+			display_state = display;
+ 478:	81 e0       	ldi	r24, 0x01	; 1
+ 47a:	80 93 03 02 	sts	0x0203, r24
+ 47e:	0a c0       	rjmp	.+20     	; 0x494 <displaySM+0xa0>
+		}
+		break;
+	}
+	
+	switch(display_state){
+ 480:	81 30       	cpi	r24, 0x01	; 1
+ 482:	41 f0       	breq	.+16     	; 0x494 <displaySM+0xa0>
+ 484:	20 f0       	brcs	.+8      	; 0x48e <displaySM+0x9a>
+ 486:	82 30       	cpi	r24, 0x02	; 2
+ 488:	09 f0       	breq	.+2      	; 0x48c <displaySM+0x98>
+ 48a:	bc c0       	rjmp	.+376    	; 0x604 <displaySM+0x210>
+ 48c:	af c0       	rjmp	.+350    	; 0x5ec <displaySM+0x1f8>
+		case init:
+		i = 0;
+ 48e:	10 92 02 02 	sts	0x0202, r1
+		break;
+ 492:	08 95       	ret
+		case display:
+		if((redcursorPos == colSolution[j]) && (patternRed[j][redcursorPos] == rowSolution[j]))
+ 494:	60 91 fc 01 	lds	r22, 0x01FC
+ 498:	86 2f       	mov	r24, r22
+ 49a:	90 e0       	ldi	r25, 0x00	; 0
+ 49c:	fc 01       	movw	r30, r24
+ 49e:	e8 5f       	subi	r30, 0xF8	; 248
+ 4a0:	fe 4f       	sbci	r31, 0xFE	; 254
+ 4a2:	20 81       	ld	r18, Z
+ 4a4:	30 e0       	ldi	r19, 0x00	; 0
+ 4a6:	40 91 f2 01 	lds	r20, 0x01F2
+ 4aa:	50 91 f3 01 	lds	r21, 0x01F3
+ 4ae:	24 17       	cp	r18, r20
+ 4b0:	35 07       	cpc	r19, r21
+ 4b2:	09 f0       	breq	.+2      	; 0x4b6 <displaySM+0xc2>
+ 4b4:	7e c0       	rjmp	.+252    	; 0x5b2 <displaySM+0x1be>
+ 4b6:	fc 01       	movw	r30, r24
+ 4b8:	ee 0f       	add	r30, r30
+ 4ba:	ff 1f       	adc	r31, r31
+ 4bc:	ee 0f       	add	r30, r30
+ 4be:	ff 1f       	adc	r31, r31
+ 4c0:	ee 0f       	add	r30, r30
+ 4c2:	ff 1f       	adc	r31, r31
+ 4c4:	2e 0f       	add	r18, r30
+ 4c6:	3f 1f       	adc	r19, r31
+ 4c8:	f9 01       	movw	r30, r18
+ 4ca:	ea 5c       	subi	r30, 0xCA	; 202
+ 4cc:	fe 4f       	sbci	r31, 0xFE	; 254
+ 4ce:	dc 01       	movw	r26, r24
+ 4d0:	ae 5f       	subi	r26, 0xFE	; 254
+ 4d2:	be 4f       	sbci	r27, 0xFE	; 254
+ 4d4:	20 81       	ld	r18, Z
+ 4d6:	8c 91       	ld	r24, X
+ 4d8:	28 13       	cpse	r18, r24
+ 4da:	6b c0       	rjmp	.+214    	; 0x5b2 <displaySM+0x1be>
+		{
+			
+			if (j == 0 )
+ 4dc:	61 11       	cpse	r22, r1
+ 4de:	16 c0       	rjmp	.+44     	; 0x50c <displaySM+0x118>
+			{
+				for (k = 0; k < 76; k++){
+ 4e0:	10 92 ff 01 	sts	0x01FF, r1
+ 4e4:	80 e0       	ldi	r24, 0x00	; 0
+					USART_Send(finish[k], 0);
+ 4e6:	e0 91 00 01 	lds	r30, 0x0100
+ 4ea:	f0 91 01 01 	lds	r31, 0x0101
+ 4ee:	e8 0f       	add	r30, r24
+ 4f0:	f1 1d       	adc	r31, r1
+ 4f2:	60 e0       	ldi	r22, 0x00	; 0
+ 4f4:	80 81       	ld	r24, Z
+ 4f6:	b8 de       	rcall	.-656    	; 0x268 <USART_Send>
+		if((redcursorPos == colSolution[j]) && (patternRed[j][redcursorPos] == rowSolution[j]))
+		{
+			
+			if (j == 0 )
+			{
+				for (k = 0; k < 76; k++){
+ 4f8:	80 91 ff 01 	lds	r24, 0x01FF
+ 4fc:	8f 5f       	subi	r24, 0xFF	; 255
+ 4fe:	80 93 ff 01 	sts	0x01FF, r24
+ 502:	8c 34       	cpi	r24, 0x4C	; 76
+ 504:	80 f3       	brcs	.-32     	; 0x4e6 <displaySM+0xf2>
+					USART_Send(finish[k], 0);
+				}
+				USART_Send('\n', 0);
+ 506:	60 e0       	ldi	r22, 0x00	; 0
+ 508:	8a e0       	ldi	r24, 0x0A	; 10
+ 50a:	ae de       	rcall	.-676    	; 0x268 <USART_Send>
+				
+			}
+			if (j == 1 )
+ 50c:	80 91 fc 01 	lds	r24, 0x01FC
+ 510:	81 30       	cpi	r24, 0x01	; 1
+ 512:	31 f4       	brne	.+12     	; 0x520 <displaySM+0x12c>
+			{
+				USART_Send('2', 0);
+ 514:	60 e0       	ldi	r22, 0x00	; 0
+ 516:	82 e3       	ldi	r24, 0x32	; 50
+ 518:	a7 de       	rcall	.-690    	; 0x268 <USART_Send>
+				USART_Send('\n', 0);
+ 51a:	60 e0       	ldi	r22, 0x00	; 0
+ 51c:	8a e0       	ldi	r24, 0x0A	; 10
+ 51e:	a4 de       	rcall	.-696    	; 0x268 <USART_Send>
+			}
+			if (j == 2 )
+ 520:	80 91 fc 01 	lds	r24, 0x01FC
+ 524:	82 30       	cpi	r24, 0x02	; 2
+ 526:	b1 f4       	brne	.+44     	; 0x554 <displaySM+0x160>
+			{
+				for (k = 0; k < 76; k++){
+ 528:	10 92 ff 01 	sts	0x01FF, r1
+ 52c:	80 e0       	ldi	r24, 0x00	; 0
+					USART_Send(finish[k], 0);
+ 52e:	e0 91 00 01 	lds	r30, 0x0100
+ 532:	f0 91 01 01 	lds	r31, 0x0101
+ 536:	e8 0f       	add	r30, r24
+ 538:	f1 1d       	adc	r31, r1
+ 53a:	60 e0       	ldi	r22, 0x00	; 0
+ 53c:	80 81       	ld	r24, Z
+ 53e:	94 de       	rcall	.-728    	; 0x268 <USART_Send>
+				USART_Send('2', 0);
+				USART_Send('\n', 0);
+			}
+			if (j == 2 )
+			{
+				for (k = 0; k < 76; k++){
+ 540:	80 91 ff 01 	lds	r24, 0x01FF
+ 544:	8f 5f       	subi	r24, 0xFF	; 255
+ 546:	80 93 ff 01 	sts	0x01FF, r24
+ 54a:	8c 34       	cpi	r24, 0x4C	; 76
+ 54c:	80 f3       	brcs	.-32     	; 0x52e <displaySM+0x13a>
+					USART_Send(finish[k], 0);
+				}
+				USART_Send('\n', 0);
+ 54e:	60 e0       	ldi	r22, 0x00	; 0
+ 550:	8a e0       	ldi	r24, 0x0A	; 10
+ 552:	8a de       	rcall	.-748    	; 0x268 <USART_Send>
+			}
+			if (j == 3 )
+ 554:	80 91 fc 01 	lds	r24, 0x01FC
+ 558:	83 30       	cpi	r24, 0x03	; 3
+ 55a:	b1 f4       	brne	.+44     	; 0x588 <displaySM+0x194>
+			{
+				for (k = 0; k < 76; k++){
+ 55c:	10 92 ff 01 	sts	0x01FF, r1
+ 560:	80 e0       	ldi	r24, 0x00	; 0
+					USART_Send(finish[k], 0);
+ 562:	e0 91 00 01 	lds	r30, 0x0100
+ 566:	f0 91 01 01 	lds	r31, 0x0101
+ 56a:	e8 0f       	add	r30, r24
+ 56c:	f1 1d       	adc	r31, r1
+ 56e:	60 e0       	ldi	r22, 0x00	; 0
+ 570:	80 81       	ld	r24, Z
+ 572:	7a de       	rcall	.-780    	; 0x268 <USART_Send>
+				}
+				USART_Send('\n', 0);
+			}
+			if (j == 3 )
+			{
+				for (k = 0; k < 76; k++){
+ 574:	80 91 ff 01 	lds	r24, 0x01FF
+ 578:	8f 5f       	subi	r24, 0xFF	; 255
+ 57a:	80 93 ff 01 	sts	0x01FF, r24
+ 57e:	8c 34       	cpi	r24, 0x4C	; 76
+ 580:	80 f3       	brcs	.-32     	; 0x562 <displaySM+0x16e>
+					USART_Send(finish[k], 0);
+				}
+				USART_Send('\n', 0);
+ 582:	60 e0       	ldi	r22, 0x00	; 0
+ 584:	8a e0       	ldi	r24, 0x0A	; 10
+ 586:	70 de       	rcall	.-800    	; 0x268 <USART_Send>
+			}
+			if (j == 4 )
+ 588:	80 91 fc 01 	lds	r24, 0x01FC
+ 58c:	84 30       	cpi	r24, 0x04	; 4
+ 58e:	51 f4       	brne	.+20     	; 0x5a4 <displaySM+0x1b0>
+			{
+				score = 1;
+ 590:	81 e0       	ldi	r24, 0x01	; 1
+ 592:	80 93 01 02 	sts	0x0201, r24
+				USART_Send('5', 0);
+ 596:	60 e0       	ldi	r22, 0x00	; 0
+ 598:	85 e3       	ldi	r24, 0x35	; 53
+ 59a:	66 de       	rcall	.-820    	; 0x268 <USART_Send>
+				USART_Send('\n', 0);
+ 59c:	60 e0       	ldi	r22, 0x00	; 0
+ 59e:	8a e0       	ldi	r24, 0x0A	; 10
+ 5a0:	63 de       	rcall	.-826    	; 0x268 <USART_Send>
+ 5a2:	07 c0       	rjmp	.+14     	; 0x5b2 <displaySM+0x1be>
+			}
+			else {
+				score = 1;
+ 5a4:	81 e0       	ldi	r24, 0x01	; 1
+ 5a6:	80 93 01 02 	sts	0x0201, r24
+				redcursorPos = 0;
+ 5aa:	10 92 f3 01 	sts	0x01F3, r1
+ 5ae:	10 92 f2 01 	sts	0x01F2, r1
+			}
+			
+			//redcursorLoc = 0;
+		}
+		outputIN = pattern[i];
+ 5b2:	80 91 02 02 	lds	r24, 0x0202
+ 5b6:	90 e0       	ldi	r25, 0x00	; 0
+ 5b8:	fc 01       	movw	r30, r24
+ 5ba:	e2 5a       	subi	r30, 0xA2	; 162
+ 5bc:	fe 4f       	sbci	r31, 0xFE	; 254
+ 5be:	20 81       	ld	r18, Z
+ 5c0:	20 93 fb 01 	sts	0x01FB, r18
+		outred = patternRed[j][i];
+ 5c4:	20 91 fc 01 	lds	r18, 0x01FC
+ 5c8:	38 e0       	ldi	r19, 0x08	; 8
+ 5ca:	23 9f       	mul	r18, r19
+ 5cc:	80 0d       	add	r24, r0
+ 5ce:	91 1d       	adc	r25, r1
+ 5d0:	11 24       	eor	r1, r1
+ 5d2:	fc 01       	movw	r30, r24
+ 5d4:	ea 5c       	subi	r30, 0xCA	; 202
+ 5d6:	fe 4f       	sbci	r31, 0xFE	; 254
+ 5d8:	20 81       	ld	r18, Z
+ 5da:	20 93 05 02 	sts	0x0205, r18
+		outgreen = patternGreen[j][i];
+ 5de:	fc 01       	movw	r30, r24
+ 5e0:	e2 5f       	subi	r30, 0xF2	; 242
+ 5e2:	fe 4f       	sbci	r31, 0xFE	; 254
+ 5e4:	80 81       	ld	r24, Z
+ 5e6:	80 93 04 02 	sts	0x0204, r24
+		break;
+ 5ea:	08 95       	ret
+		case incr:
+		outred = 0xFF;
+ 5ec:	8f ef       	ldi	r24, 0xFF	; 255
+ 5ee:	80 93 05 02 	sts	0x0205, r24
+		outgreen = 0xFF;
+ 5f2:	80 93 04 02 	sts	0x0204, r24
+		outputIN = 0x00;
+ 5f6:	10 92 fb 01 	sts	0x01FB, r1
+		i++;
+ 5fa:	80 91 02 02 	lds	r24, 0x0202
+ 5fe:	8f 5f       	subi	r24, 0xFF	; 255
+ 600:	80 93 02 02 	sts	0x0202, r24
+ 604:	08 95       	ret
+
+00000606 <mazeSM>:
+
+
+enum maze_SM {wait, right, left, up, down} maze_state;
+void mazeSM()
+{
+	switch(maze_state)
+ 606:	80 91 00 02 	lds	r24, 0x0200
+ 60a:	82 30       	cpi	r24, 0x02	; 2
+ 60c:	09 f4       	brne	.+2      	; 0x610 <mazeSM+0xa>
+ 60e:	f6 c0       	rjmp	.+492    	; 0x7fc <mazeSM+0x1f6>
+ 610:	30 f4       	brcc	.+12     	; 0x61e <mazeSM+0x18>
+ 612:	88 23       	and	r24, r24
+ 614:	59 f0       	breq	.+22     	; 0x62c <mazeSM+0x26>
+ 616:	81 30       	cpi	r24, 0x01	; 1
+ 618:	09 f4       	brne	.+2      	; 0x61c <mazeSM+0x16>
+ 61a:	b4 c0       	rjmp	.+360    	; 0x784 <mazeSM+0x17e>
+ 61c:	95 c1       	rjmp	.+810    	; 0x948 <mazeSM+0x342>
+ 61e:	83 30       	cpi	r24, 0x03	; 3
+ 620:	09 f4       	brne	.+2      	; 0x624 <mazeSM+0x1e>
+ 622:	29 c1       	rjmp	.+594    	; 0x876 <mazeSM+0x270>
+ 624:	84 30       	cpi	r24, 0x04	; 4
+ 626:	09 f4       	brne	.+2      	; 0x62a <mazeSM+0x24>
+ 628:	5a c1       	rjmp	.+692    	; 0x8de <mazeSM+0x2d8>
+ 62a:	8e c1       	rjmp	.+796    	; 0x948 <mazeSM+0x342>
+	{
+		case wait:
+		if(jpress == 0x01)
+ 62c:	80 91 f4 01 	lds	r24, 0x01F4
+ 630:	90 91 f5 01 	lds	r25, 0x01F5
+ 634:	01 97       	sbiw	r24, 0x01	; 1
+ 636:	31 f5       	brne	.+76     	; 0x684 <mazeSM+0x7e>
+		{
+			if ((~patternRed[j][redcursorPos] & patternGreen[j][redcursorPos+1]) != 0x00)
+ 638:	20 91 fc 01 	lds	r18, 0x01FC
+ 63c:	30 e0       	ldi	r19, 0x00	; 0
+ 63e:	80 91 f2 01 	lds	r24, 0x01F2
+ 642:	90 91 f3 01 	lds	r25, 0x01F3
+ 646:	22 0f       	add	r18, r18
+ 648:	33 1f       	adc	r19, r19
+ 64a:	22 0f       	add	r18, r18
+ 64c:	33 1f       	adc	r19, r19
+ 64e:	22 0f       	add	r18, r18
+ 650:	33 1f       	adc	r19, r19
+ 652:	f9 01       	movw	r30, r18
+ 654:	e2 5f       	subi	r30, 0xF2	; 242
+ 656:	fe 4f       	sbci	r31, 0xFE	; 254
+ 658:	e8 0f       	add	r30, r24
+ 65a:	f9 1f       	adc	r31, r25
+ 65c:	41 81       	ldd	r20, Z+1	; 0x01
+ 65e:	50 e0       	ldi	r21, 0x00	; 0
+ 660:	82 0f       	add	r24, r18
+ 662:	93 1f       	adc	r25, r19
+ 664:	fc 01       	movw	r30, r24
+ 666:	ea 5c       	subi	r30, 0xCA	; 202
+ 668:	fe 4f       	sbci	r31, 0xFE	; 254
+ 66a:	80 81       	ld	r24, Z
+ 66c:	90 e0       	ldi	r25, 0x00	; 0
+ 66e:	80 95       	com	r24
+ 670:	90 95       	com	r25
+ 672:	84 23       	and	r24, r20
+ 674:	95 23       	and	r25, r21
+ 676:	89 2b       	or	r24, r25
+ 678:	09 f4       	brne	.+2      	; 0x67c <mazeSM+0x76>
+ 67a:	70 c1       	rjmp	.+736    	; 0x95c <mazeSM+0x356>
+			{
+				maze_state = right;
+ 67c:	81 e0       	ldi	r24, 0x01	; 1
+ 67e:	80 93 00 02 	sts	0x0200, r24
+ 682:	08 95       	ret
+			else {
+				maze_state = wait;
+			}
+			
+		}
+		else if (jpress == 0x02)
+ 684:	80 91 f4 01 	lds	r24, 0x01F4
+ 688:	90 91 f5 01 	lds	r25, 0x01F5
+ 68c:	02 97       	sbiw	r24, 0x02	; 2
+ 68e:	31 f5       	brne	.+76     	; 0x6dc <mazeSM+0xd6>
+		{
+			if ((~patternRed[j][redcursorPos] & patternGreen[j][redcursorPos-1]) != 0x00)
+ 690:	20 91 fc 01 	lds	r18, 0x01FC
+ 694:	30 e0       	ldi	r19, 0x00	; 0
+ 696:	80 91 f2 01 	lds	r24, 0x01F2
+ 69a:	90 91 f3 01 	lds	r25, 0x01F3
+ 69e:	22 0f       	add	r18, r18
+ 6a0:	33 1f       	adc	r19, r19
+ 6a2:	22 0f       	add	r18, r18
+ 6a4:	33 1f       	adc	r19, r19
+ 6a6:	22 0f       	add	r18, r18
+ 6a8:	33 1f       	adc	r19, r19
+ 6aa:	fc 01       	movw	r30, r24
+ 6ac:	e2 0f       	add	r30, r18
+ 6ae:	f3 1f       	adc	r31, r19
+ 6b0:	e3 5f       	subi	r30, 0xF3	; 243
+ 6b2:	fe 4f       	sbci	r31, 0xFE	; 254
+ 6b4:	40 81       	ld	r20, Z
+ 6b6:	50 e0       	ldi	r21, 0x00	; 0
+ 6b8:	82 0f       	add	r24, r18
+ 6ba:	93 1f       	adc	r25, r19
+ 6bc:	fc 01       	movw	r30, r24
+ 6be:	ea 5c       	subi	r30, 0xCA	; 202
+ 6c0:	fe 4f       	sbci	r31, 0xFE	; 254
+ 6c2:	80 81       	ld	r24, Z
+ 6c4:	90 e0       	ldi	r25, 0x00	; 0
+ 6c6:	80 95       	com	r24
+ 6c8:	90 95       	com	r25
+ 6ca:	84 23       	and	r24, r20
+ 6cc:	95 23       	and	r25, r21
+ 6ce:	89 2b       	or	r24, r25
+ 6d0:	09 f4       	brne	.+2      	; 0x6d4 <mazeSM+0xce>
+ 6d2:	44 c1       	rjmp	.+648    	; 0x95c <mazeSM+0x356>
+			{
+				maze_state = left;
+ 6d4:	82 e0       	ldi	r24, 0x02	; 2
+ 6d6:	80 93 00 02 	sts	0x0200, r24
+ 6da:	08 95       	ret
+			else {
+				maze_state = wait;
+			}
+			
+		}
+		else if (jpress == 0x04)
+ 6dc:	80 91 f4 01 	lds	r24, 0x01F4
+ 6e0:	90 91 f5 01 	lds	r25, 0x01F5
+ 6e4:	04 97       	sbiw	r24, 0x04	; 4
+ 6e6:	21 f5       	brne	.+72     	; 0x730 <mazeSM+0x12a>
+		{
+			if (((~((patternRed[j][redcursorPos]<<1)|0x01)) & (patternGreen[j][redcursorPos])) != 0x00)
+ 6e8:	20 91 fc 01 	lds	r18, 0x01FC
+ 6ec:	80 91 f2 01 	lds	r24, 0x01F2
+ 6f0:	90 91 f3 01 	lds	r25, 0x01F3
+ 6f4:	38 e0       	ldi	r19, 0x08	; 8
+ 6f6:	23 9f       	mul	r18, r19
+ 6f8:	80 0d       	add	r24, r0
+ 6fa:	91 1d       	adc	r25, r1
+ 6fc:	11 24       	eor	r1, r1
+ 6fe:	fc 01       	movw	r30, r24
+ 700:	ea 5c       	subi	r30, 0xCA	; 202
+ 702:	fe 4f       	sbci	r31, 0xFE	; 254
+ 704:	40 81       	ld	r20, Z
+ 706:	50 e0       	ldi	r21, 0x00	; 0
+ 708:	44 0f       	add	r20, r20
+ 70a:	55 1f       	adc	r21, r21
+ 70c:	41 60       	ori	r20, 0x01	; 1
+ 70e:	40 95       	com	r20
+ 710:	50 95       	com	r21
+ 712:	fc 01       	movw	r30, r24
+ 714:	e2 5f       	subi	r30, 0xF2	; 242
+ 716:	fe 4f       	sbci	r31, 0xFE	; 254
+ 718:	20 81       	ld	r18, Z
+ 71a:	30 e0       	ldi	r19, 0x00	; 0
+ 71c:	ca 01       	movw	r24, r20
+ 71e:	82 23       	and	r24, r18
+ 720:	93 23       	and	r25, r19
+ 722:	89 2b       	or	r24, r25
+ 724:	09 f4       	brne	.+2      	; 0x728 <mazeSM+0x122>
+ 726:	1a c1       	rjmp	.+564    	; 0x95c <mazeSM+0x356>
+			{
+				maze_state = up;
+ 728:	83 e0       	ldi	r24, 0x03	; 3
+ 72a:	80 93 00 02 	sts	0x0200, r24
+ 72e:	08 95       	ret
+			else {
+				maze_state = wait;
+			}
+			
+		}
+		else if (jpress == 0x08)
+ 730:	80 91 f4 01 	lds	r24, 0x01F4
+ 734:	90 91 f5 01 	lds	r25, 0x01F5
+ 738:	08 97       	sbiw	r24, 0x08	; 8
+ 73a:	09 f0       	breq	.+2      	; 0x73e <mazeSM+0x138>
+ 73c:	0f c1       	rjmp	.+542    	; 0x95c <mazeSM+0x356>
+		{
+			if (((~((patternRed[j][redcursorPos]>>1)|0x80)) & (patternGreen[j][redcursorPos])) != 0x00)
+ 73e:	20 91 fc 01 	lds	r18, 0x01FC
+ 742:	80 91 f2 01 	lds	r24, 0x01F2
+ 746:	90 91 f3 01 	lds	r25, 0x01F3
+ 74a:	38 e0       	ldi	r19, 0x08	; 8
+ 74c:	23 9f       	mul	r18, r19
+ 74e:	80 0d       	add	r24, r0
+ 750:	91 1d       	adc	r25, r1
+ 752:	11 24       	eor	r1, r1
+ 754:	fc 01       	movw	r30, r24
+ 756:	ea 5c       	subi	r30, 0xCA	; 202
+ 758:	fe 4f       	sbci	r31, 0xFE	; 254
+ 75a:	40 81       	ld	r20, Z
+ 75c:	46 95       	lsr	r20
+ 75e:	40 68       	ori	r20, 0x80	; 128
+ 760:	50 e0       	ldi	r21, 0x00	; 0
+ 762:	40 95       	com	r20
+ 764:	50 95       	com	r21
+ 766:	fc 01       	movw	r30, r24
+ 768:	e2 5f       	subi	r30, 0xF2	; 242
+ 76a:	fe 4f       	sbci	r31, 0xFE	; 254
+ 76c:	20 81       	ld	r18, Z
+ 76e:	30 e0       	ldi	r19, 0x00	; 0
+ 770:	ca 01       	movw	r24, r20
+ 772:	82 23       	and	r24, r18
+ 774:	93 23       	and	r25, r19
+ 776:	89 2b       	or	r24, r25
+ 778:	09 f4       	brne	.+2      	; 0x77c <mazeSM+0x176>
+ 77a:	f0 c0       	rjmp	.+480    	; 0x95c <mazeSM+0x356>
+			{
+				maze_state = down;
+ 77c:	84 e0       	ldi	r24, 0x04	; 4
+ 77e:	80 93 00 02 	sts	0x0200, r24
+ 782:	08 95       	ret
+				maze_state = wait;
+			}
+		}
+		break;
+		case right:
+		if(redcursorPos < 7)
+ 784:	80 91 f2 01 	lds	r24, 0x01F2
+ 788:	90 91 f3 01 	lds	r25, 0x01F3
+ 78c:	87 30       	cpi	r24, 0x07	; 7
+ 78e:	91 05       	cpc	r25, r1
+ 790:	f8 f4       	brcc	.+62     	; 0x7d0 <mazeSM+0x1ca>
+		{
+			patternRed[j][redcursorPos+1] = patternRed[j][redcursorPos];
+ 792:	9c 01       	movw	r18, r24
+ 794:	2f 5f       	subi	r18, 0xFF	; 255
+ 796:	3f 4f       	sbci	r19, 0xFF	; 255
+ 798:	40 91 fc 01 	lds	r20, 0x01FC
+ 79c:	50 e0       	ldi	r21, 0x00	; 0
+ 79e:	44 0f       	add	r20, r20
+ 7a0:	55 1f       	adc	r21, r21
+ 7a2:	44 0f       	add	r20, r20
+ 7a4:	55 1f       	adc	r21, r21
+ 7a6:	44 0f       	add	r20, r20
+ 7a8:	55 1f       	adc	r21, r21
+ 7aa:	84 0f       	add	r24, r20
+ 7ac:	95 1f       	adc	r25, r21
+ 7ae:	fc 01       	movw	r30, r24
+ 7b0:	ea 5c       	subi	r30, 0xCA	; 202
+ 7b2:	fe 4f       	sbci	r31, 0xFE	; 254
+ 7b4:	80 81       	ld	r24, Z
+ 7b6:	42 0f       	add	r20, r18
+ 7b8:	53 1f       	adc	r21, r19
+ 7ba:	da 01       	movw	r26, r20
+ 7bc:	aa 5c       	subi	r26, 0xCA	; 202
+ 7be:	be 4f       	sbci	r27, 0xFE	; 254
+ 7c0:	8c 93       	st	X, r24
+			patternRed[j][redcursorPos] = 0b11111111;
+ 7c2:	8f ef       	ldi	r24, 0xFF	; 255
+ 7c4:	80 83       	st	Z, r24
+			redcursorPos++;
+ 7c6:	30 93 f3 01 	sts	0x01F3, r19
+ 7ca:	20 93 f2 01 	sts	0x01F2, r18
+ 7ce:	13 c0       	rjmp	.+38     	; 0x7f6 <mazeSM+0x1f0>
+		}
+		else if(redcursorPos >= 7)
+		{
+			redcursorPos = 0;
+ 7d0:	10 92 f3 01 	sts	0x01F3, r1
+ 7d4:	10 92 f2 01 	sts	0x01F2, r1
+			patternRed[j][0] = patternRed[j][7];
+ 7d8:	e0 91 fc 01 	lds	r30, 0x01FC
+ 7dc:	f0 e0       	ldi	r31, 0x00	; 0
+ 7de:	ee 0f       	add	r30, r30
+ 7e0:	ff 1f       	adc	r31, r31
+ 7e2:	ee 0f       	add	r30, r30
+ 7e4:	ff 1f       	adc	r31, r31
+ 7e6:	ee 0f       	add	r30, r30
+ 7e8:	ff 1f       	adc	r31, r31
+ 7ea:	ea 5c       	subi	r30, 0xCA	; 202
+ 7ec:	fe 4f       	sbci	r31, 0xFE	; 254
+ 7ee:	87 81       	ldd	r24, Z+7	; 0x07
+ 7f0:	80 83       	st	Z, r24
+			patternRed[j][7] = 0b11111111;
+ 7f2:	8f ef       	ldi	r24, 0xFF	; 255
+ 7f4:	87 83       	std	Z+7, r24	; 0x07
+		}
+		maze_state = wait;
+ 7f6:	10 92 00 02 	sts	0x0200, r1
+		break;
+ 7fa:	08 95       	ret
+		case left:
+		if(redcursorPos > 0)
+ 7fc:	80 91 f2 01 	lds	r24, 0x01F2
+ 800:	90 91 f3 01 	lds	r25, 0x01F3
+ 804:	00 97       	sbiw	r24, 0x00	; 0
+ 806:	f9 f0       	breq	.+62     	; 0x846 <mazeSM+0x240>
+		{
+			patternRed[j][redcursorPos-1] = patternRed[j][redcursorPos];
+ 808:	9c 01       	movw	r18, r24
+ 80a:	21 50       	subi	r18, 0x01	; 1
+ 80c:	31 09       	sbc	r19, r1
+ 80e:	40 91 fc 01 	lds	r20, 0x01FC
+ 812:	50 e0       	ldi	r21, 0x00	; 0
+ 814:	44 0f       	add	r20, r20
+ 816:	55 1f       	adc	r21, r21
+ 818:	44 0f       	add	r20, r20
+ 81a:	55 1f       	adc	r21, r21
+ 81c:	44 0f       	add	r20, r20
+ 81e:	55 1f       	adc	r21, r21
+ 820:	84 0f       	add	r24, r20
+ 822:	95 1f       	adc	r25, r21
+ 824:	fc 01       	movw	r30, r24
+ 826:	ea 5c       	subi	r30, 0xCA	; 202
+ 828:	fe 4f       	sbci	r31, 0xFE	; 254
+ 82a:	80 81       	ld	r24, Z
+ 82c:	42 0f       	add	r20, r18
+ 82e:	53 1f       	adc	r21, r19
+ 830:	da 01       	movw	r26, r20
+ 832:	aa 5c       	subi	r26, 0xCA	; 202
+ 834:	be 4f       	sbci	r27, 0xFE	; 254
+ 836:	8c 93       	st	X, r24
+			patternRed[j][redcursorPos] = 0b11111111;
+ 838:	8f ef       	ldi	r24, 0xFF	; 255
+ 83a:	80 83       	st	Z, r24
+			redcursorPos--;
+ 83c:	30 93 f3 01 	sts	0x01F3, r19
+ 840:	20 93 f2 01 	sts	0x01F2, r18
+ 844:	15 c0       	rjmp	.+42     	; 0x870 <mazeSM+0x26a>
+		}
+		else if (redcursorPos <= 0)
+		{
+			redcursorPos = 7;
+ 846:	87 e0       	ldi	r24, 0x07	; 7
+ 848:	90 e0       	ldi	r25, 0x00	; 0
+ 84a:	90 93 f3 01 	sts	0x01F3, r25
+ 84e:	80 93 f2 01 	sts	0x01F2, r24
+			patternRed[j][7] = patternRed[j][0];
+ 852:	e0 91 fc 01 	lds	r30, 0x01FC
+ 856:	f0 e0       	ldi	r31, 0x00	; 0
+ 858:	ee 0f       	add	r30, r30
+ 85a:	ff 1f       	adc	r31, r31
+ 85c:	ee 0f       	add	r30, r30
+ 85e:	ff 1f       	adc	r31, r31
+ 860:	ee 0f       	add	r30, r30
+ 862:	ff 1f       	adc	r31, r31
+ 864:	ea 5c       	subi	r30, 0xCA	; 202
+ 866:	fe 4f       	sbci	r31, 0xFE	; 254
+ 868:	80 81       	ld	r24, Z
+ 86a:	87 83       	std	Z+7, r24	; 0x07
+			patternRed[j][0] = 0b11111111;
+ 86c:	8f ef       	ldi	r24, 0xFF	; 255
+ 86e:	80 83       	st	Z, r24
+		}
+		maze_state = wait;
+ 870:	10 92 00 02 	sts	0x0200, r1
+		break;
+ 874:	08 95       	ret
+		case up:
+		if(redcursorLoc < 7)
+ 876:	80 91 f0 01 	lds	r24, 0x01F0
+ 87a:	90 91 f1 01 	lds	r25, 0x01F1
+ 87e:	87 30       	cpi	r24, 0x07	; 7
+ 880:	91 05       	cpc	r25, r1
+ 882:	b8 f4       	brcc	.+46     	; 0x8b2 <mazeSM+0x2ac>
+		{
+			patternRed[j][redcursorPos] = ~patternRed[j][redcursorPos];
+ 884:	20 91 fc 01 	lds	r18, 0x01FC
+ 888:	e0 91 f2 01 	lds	r30, 0x01F2
+ 88c:	f0 91 f3 01 	lds	r31, 0x01F3
+			patternRed[j][redcursorPos] = patternRed[j][redcursorPos] << 1;
+			patternRed[j][redcursorPos] = ~patternRed[j][redcursorPos];
+ 890:	38 e0       	ldi	r19, 0x08	; 8
+ 892:	23 9f       	mul	r18, r19
+ 894:	e0 0d       	add	r30, r0
+ 896:	f1 1d       	adc	r31, r1
+ 898:	11 24       	eor	r1, r1
+ 89a:	ea 5c       	subi	r30, 0xCA	; 202
+ 89c:	fe 4f       	sbci	r31, 0xFE	; 254
+		maze_state = wait;
+		break;
+		case up:
+		if(redcursorLoc < 7)
+		{
+			patternRed[j][redcursorPos] = ~patternRed[j][redcursorPos];
+ 89e:	20 81       	ld	r18, Z
+			patternRed[j][redcursorPos] = patternRed[j][redcursorPos] << 1;
+ 8a0:	22 0f       	add	r18, r18
+			patternRed[j][redcursorPos] = ~patternRed[j][redcursorPos];
+ 8a2:	21 60       	ori	r18, 0x01	; 1
+ 8a4:	20 83       	st	Z, r18
+			redcursorLoc++;
+ 8a6:	01 96       	adiw	r24, 0x01	; 1
+ 8a8:	90 93 f1 01 	sts	0x01F1, r25
+ 8ac:	80 93 f0 01 	sts	0x01F0, r24
+ 8b0:	13 c0       	rjmp	.+38     	; 0x8d8 <mazeSM+0x2d2>
+		}
+		else if (redcursorLoc >= 7)
+		{
+			patternRed[j][redcursorPos] =  0b11111110;
+ 8b2:	80 91 fc 01 	lds	r24, 0x01FC
+ 8b6:	e0 91 f2 01 	lds	r30, 0x01F2
+ 8ba:	f0 91 f3 01 	lds	r31, 0x01F3
+ 8be:	98 e0       	ldi	r25, 0x08	; 8
+ 8c0:	89 9f       	mul	r24, r25
+ 8c2:	e0 0d       	add	r30, r0
+ 8c4:	f1 1d       	adc	r31, r1
+ 8c6:	11 24       	eor	r1, r1
+ 8c8:	ea 5c       	subi	r30, 0xCA	; 202
+ 8ca:	fe 4f       	sbci	r31, 0xFE	; 254
+ 8cc:	8e ef       	ldi	r24, 0xFE	; 254
+ 8ce:	80 83       	st	Z, r24
+			redcursorLoc = 0;
+ 8d0:	10 92 f1 01 	sts	0x01F1, r1
+ 8d4:	10 92 f0 01 	sts	0x01F0, r1
+		}
+		maze_state = wait;
+ 8d8:	10 92 00 02 	sts	0x0200, r1
+		break;
+ 8dc:	08 95       	ret
+		case down:
+		if(redcursorLoc > 0)
+ 8de:	80 91 f0 01 	lds	r24, 0x01F0
+ 8e2:	90 91 f1 01 	lds	r25, 0x01F1
+ 8e6:	00 97       	sbiw	r24, 0x00	; 0
+ 8e8:	b9 f0       	breq	.+46     	; 0x918 <mazeSM+0x312>
+		{
+			patternRed[j][redcursorPos] = ~patternRed[j][redcursorPos];
+ 8ea:	20 91 fc 01 	lds	r18, 0x01FC
+ 8ee:	e0 91 f2 01 	lds	r30, 0x01F2
+ 8f2:	f0 91 f3 01 	lds	r31, 0x01F3
+			patternRed[j][redcursorPos] = patternRed[j][redcursorPos] >> 1;
+			patternRed[j][redcursorPos] = ~patternRed[j][redcursorPos];
+ 8f6:	38 e0       	ldi	r19, 0x08	; 8
+ 8f8:	23 9f       	mul	r18, r19
+ 8fa:	e0 0d       	add	r30, r0
+ 8fc:	f1 1d       	adc	r31, r1
+ 8fe:	11 24       	eor	r1, r1
+ 900:	ea 5c       	subi	r30, 0xCA	; 202
+ 902:	fe 4f       	sbci	r31, 0xFE	; 254
+		maze_state = wait;
+		break;
+		case down:
+		if(redcursorLoc > 0)
+		{
+			patternRed[j][redcursorPos] = ~patternRed[j][redcursorPos];
+ 904:	20 81       	ld	r18, Z
+			patternRed[j][redcursorPos] = patternRed[j][redcursorPos] >> 1;
+ 906:	26 95       	lsr	r18
+			patternRed[j][redcursorPos] = ~patternRed[j][redcursorPos];
+ 908:	20 58       	subi	r18, 0x80	; 128
+ 90a:	20 83       	st	Z, r18
+			redcursorLoc--;
+ 90c:	01 97       	sbiw	r24, 0x01	; 1
+ 90e:	90 93 f1 01 	sts	0x01F1, r25
+ 912:	80 93 f0 01 	sts	0x01F0, r24
+ 916:	15 c0       	rjmp	.+42     	; 0x942 <mazeSM+0x33c>
+		}
+		else if (redcursorLoc <= 0)
+		{
+			patternRed[j][redcursorPos] =  0b01111111;
+ 918:	80 91 fc 01 	lds	r24, 0x01FC
+ 91c:	e0 91 f2 01 	lds	r30, 0x01F2
+ 920:	f0 91 f3 01 	lds	r31, 0x01F3
+ 924:	98 e0       	ldi	r25, 0x08	; 8
+ 926:	89 9f       	mul	r24, r25
+ 928:	e0 0d       	add	r30, r0
+ 92a:	f1 1d       	adc	r31, r1
+ 92c:	11 24       	eor	r1, r1
+ 92e:	ea 5c       	subi	r30, 0xCA	; 202
+ 930:	fe 4f       	sbci	r31, 0xFE	; 254
+ 932:	8f e7       	ldi	r24, 0x7F	; 127
+ 934:	80 83       	st	Z, r24
+			redcursorLoc = 7;
+ 936:	87 e0       	ldi	r24, 0x07	; 7
+ 938:	90 e0       	ldi	r25, 0x00	; 0
+ 93a:	90 93 f1 01 	sts	0x01F1, r25
+ 93e:	80 93 f0 01 	sts	0x01F0, r24
+		}
+		maze_state = wait;
+ 942:	10 92 00 02 	sts	0x0200, r1
+		break;
+ 946:	08 95       	ret
+		default:
+		redcursorPos = 0;
+ 948:	10 92 f3 01 	sts	0x01F3, r1
+ 94c:	10 92 f2 01 	sts	0x01F2, r1
+		redcursorLoc = 0;
+ 950:	10 92 f1 01 	sts	0x01F1, r1
+ 954:	10 92 f0 01 	sts	0x01F0, r1
+		maze_state = wait;
+ 958:	10 92 00 02 	sts	0x0200, r1
+ 95c:	08 95       	ret
+
+0000095e <main>:
+
+
+
+int main(void)
+{
+	DDRA = 0xFC; PORTA = 0x03;
+ 95e:	8c ef       	ldi	r24, 0xFC	; 252
+ 960:	81 b9       	out	0x01, r24	; 1
+ 962:	83 e0       	ldi	r24, 0x03	; 3
+ 964:	82 b9       	out	0x02, r24	; 2
+	DDRC = 0xF0; PORTC = 0x0F;
+ 966:	80 ef       	ldi	r24, 0xF0	; 240
+ 968:	87 b9       	out	0x07, r24	; 7
+ 96a:	8f e0       	ldi	r24, 0x0F	; 15
+ 96c:	88 b9       	out	0x08, r24	; 8
+	DDRD = 0xFF; PORTD = 0x00;
+ 96e:	8f ef       	ldi	r24, 0xFF	; 255
+ 970:	8a b9       	out	0x0a, r24	; 10
+ 972:	1b b8       	out	0x0b, r1	; 11
+	DDRB = 0xFF; PORTB = 0x00;
+ 974:	84 b9       	out	0x04, r24	; 4
+ 976:	15 b8       	out	0x05, r1	; 5
+	unsigned char * finish1 = "Welcome to Maze Runner! Choose a map and begin.";
+	unsigned char m;
+	initUSART(0);
+ 978:	80 e0       	ldi	r24, 0x00	; 0
+ 97a:	54 dc       	rcall	.-1880   	; 0x224 <initUSART>
+unsigned long _avr_timer_M = 1; // Start count from here, down to 0. Default 1ms
+unsigned long _avr_timer_cntcurr = 0; // Current internal count of 1ms ticks
+
+// Set TimerISR() to tick every M ms
+void TimerSet(unsigned long M) {
+	_avr_timer_M = M;
+ 97c:	81 e0       	ldi	r24, 0x01	; 1
+ 97e:	90 e0       	ldi	r25, 0x00	; 0
+ 980:	a0 e0       	ldi	r26, 0x00	; 0
+ 982:	b0 e0       	ldi	r27, 0x00	; 0
+ 984:	80 93 6e 01 	sts	0x016E, r24
+ 988:	90 93 6f 01 	sts	0x016F, r25
+ 98c:	a0 93 70 01 	sts	0x0170, r26
+ 990:	b0 93 71 01 	sts	0x0171, r27
+	_avr_timer_cntcurr = _avr_timer_M;
+ 994:	80 93 f6 01 	sts	0x01F6, r24
+ 998:	90 93 f7 01 	sts	0x01F7, r25
+ 99c:	a0 93 f8 01 	sts	0x01F8, r26
+ 9a0:	b0 93 f9 01 	sts	0x01F9, r27
+	TimerSet(1);
+	TimerOn();
+ 9a4:	91 db       	rcall	.-2270   	; 0xc8 <TimerOn>
+	ADC_init();
+ 9a6:	c7 dc       	rcall	.-1650   	; 0x336 <ADC_init>
+ 9a8:	c2 e7       	ldi	r28, 0x72	; 114
+ 9aa:	d1 e0       	ldi	r29, 0x01	; 1
+ 9ac:	01 ea       	ldi	r16, 0xA1	; 161
+ 9ae:	11 e0       	ldi	r17, 0x01	; 1
+	unsigned short t3 = 0;
+	for (m = 0; m < 47; m++){
+		USART_Send(finish1[m], 0);
+ 9b0:	60 e0       	ldi	r22, 0x00	; 0
+ 9b2:	89 91       	ld	r24, Y+
+ 9b4:	59 dc       	rcall	.-1870   	; 0x268 <USART_Send>
+	initUSART(0);
+	TimerSet(1);
+	TimerOn();
+	ADC_init();
+	unsigned short t3 = 0;
+	for (m = 0; m < 47; m++){
+ 9b6:	c0 17       	cp	r28, r16
+ 9b8:	d1 07       	cpc	r29, r17
+ 9ba:	d1 f7       	brne	.-12     	; 0x9b0 <main+0x52>
+		USART_Send(finish1[m], 0);
+	}
+	USART_Send('\n', 0);
+ 9bc:	60 e0       	ldi	r22, 0x00	; 0
+ 9be:	8a e0       	ldi	r24, 0x0A	; 10
+ 9c0:	53 dc       	rcall	.-1882   	; 0x268 <USART_Send>
+	while(1) {
+		
+		adcSM();
+ 9c2:	d9 dc       	rcall	.-1614   	; 0x376 <adcSM>
+		displaySM();
+ 9c4:	17 dd       	rcall	.-1490   	; 0x3f4 <displaySM>
+	unsigned char m;
+	initUSART(0);
+	TimerSet(1);
+	TimerOn();
+	ADC_init();
+	unsigned short t3 = 0;
+ 9c6:	c0 e0       	ldi	r28, 0x00	; 0
+ 9c8:	d0 e0       	ldi	r29, 0x00	; 0
+		{
+			mazeSM();
+			t3 = 0;
+		}
+		if (score == 1){
+			PORTA = 0x08;
+ 9ca:	18 e0       	ldi	r17, 0x08	; 8
+		adcSM();
+		displaySM();
+		if(t3 == 150)
+		{
+			mazeSM();
+			t3 = 0;
+ 9cc:	f1 2c       	mov	r15, r1
+ 9ce:	00 e0       	ldi	r16, 0x00	; 0
+ 9d0:	03 c0       	rjmp	.+6      	; 0x9d8 <main+0x7a>
+		
+		adcSM();
+		displaySM();
+		if(t3 == 150)
+		{
+			mazeSM();
+ 9d2:	19 de       	rcall	.-974    	; 0x606 <mazeSM>
+			t3 = 0;
+ 9d4:	cf 2d       	mov	r28, r15
+ 9d6:	d0 2f       	mov	r29, r16
+		}
+		if (score == 1){
+ 9d8:	80 91 01 02 	lds	r24, 0x0201
+ 9dc:	81 30       	cpi	r24, 0x01	; 1
+ 9de:	11 f4       	brne	.+4      	; 0x9e4 <main+0x86>
+			PORTA = 0x08;
+ 9e0:	12 b9       	out	0x02, r17	; 2
+ 9e2:	03 c0       	rjmp	.+6      	; 0x9ea <main+0x8c>
+		}
+		else if(score == 0){
+ 9e4:	81 11       	cpse	r24, r1
+ 9e6:	01 c0       	rjmp	.+2      	; 0x9ea <main+0x8c>
+			PORTA = 0;
+ 9e8:	12 b8       	out	0x02, r1	; 2
+		}
+		
+		transmit_data_IN(outputIN);
+ 9ea:	80 91 fb 01 	lds	r24, 0x01FB
+ 9ee:	4e dc       	rcall	.-1892   	; 0x28c <transmit_data_IN>
+		
+		transmit_data_Green(outgreen);
+ 9f0:	80 91 04 02 	lds	r24, 0x0204
+ 9f4:	81 dc       	rcall	.-1790   	; 0x2f8 <transmit_data_Green>
+		transmit_data_Red(outred);
+ 9f6:	80 91 05 02 	lds	r24, 0x0205
+ 9fa:	5f dc       	rcall	.-1858   	; 0x2ba <transmit_data_Red>
+		
+		while (!TimerFlag);	// Wait 1 sec
+ 9fc:	80 91 fa 01 	lds	r24, 0x01FA
+ a00:	88 23       	and	r24, r24
+ a02:	e1 f3       	breq	.-8      	; 0x9fc <main+0x9e>
+		TimerFlag = 0;
+ a04:	10 92 fa 01 	sts	0x01FA, r1
+		t3++;
+ a08:	21 96       	adiw	r28, 0x01	; 1
+		USART_Send(finish1[m], 0);
+	}
+	USART_Send('\n', 0);
+	while(1) {
+		
+		adcSM();
+ a0a:	b5 dc       	rcall	.-1686   	; 0x376 <adcSM>
+		displaySM();
+ a0c:	f3 dc       	rcall	.-1562   	; 0x3f4 <displaySM>
+		if(t3 == 150)
+ a0e:	c6 39       	cpi	r28, 0x96	; 150
+ a10:	d1 05       	cpc	r29, r1
+ a12:	11 f7       	brne	.-60     	; 0x9d8 <main+0x7a>
+ a14:	de cf       	rjmp	.-68     	; 0x9d2 <main+0x74>
+
+00000a16 <_exit>:
+ a16:	f8 94       	cli
+
+00000a18 <__stop_program>:
+ a18:	ff cf       	rjmp	.-2      	; 0xa18 <__stop_program>
